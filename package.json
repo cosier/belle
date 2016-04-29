@@ -27,7 +27,7 @@
     "lodash": "^4.11.1"
   },
   "scripts": {
-    "build": "BABEL_ENV=production node_modules/.bin/babel --out-dir='lib' --ignore='__tests__/*' src",
+    "build": "BABEL_ENV=production babel --out-dir='lib' --ignore='__tests__/*' $APP_ROOT/client/vendor/belle/src",
     "preinstall": "npm run build",
     "prepublish": "npm run build",
     "postpublish": "./scripts/publish_gh_pages.sh",
