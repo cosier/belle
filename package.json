@@ -1,6 +1,6 @@
 {
   "name": "belle",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Configurable React Components with great UX",
   "author": {
     "name": "Nik Graf",
@@ -23,10 +23,12 @@
   ],
   "peerDependencies": {
     "react": ">=0.14.0 || ^15.0.0-rc",
-    "react-dom": ">=0.14.0 || ^15.0.0-rc"
+    "react-dom": ">=0.14.0 || ^15.0.0-rc",
+    "lodash": "^4.11.1"
   },
   "scripts": {
     "build": "BABEL_ENV=production node_modules/.bin/babel --out-dir='lib' --ignore='__tests__/*' src",
+    "preinstall": "npm run build",
     "prepublish": "npm run build",
     "postpublish": "./scripts/publish_gh_pages.sh",
     "test": "BABEL_ENV=test BABEL_JEST_STAGE=0 jest src/",
